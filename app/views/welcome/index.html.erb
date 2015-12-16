@@ -1,0 +1,8 @@
+<h2>Welcome. Tell someone they've changed.</h2>
+
+<% if current_user %>
+  <%= form_tag '/notification' do %>
+    Your Friend's Email: <%= text_field_tag :email %>
+    <%= submit_tag "Tell them" %>
+  <% end %>
+<% end %>
