@@ -66,7 +66,7 @@ Depending on the person's email client you're sending the email to, it will rend
 ```rb
 # inform.html.erb and inform.text.erb
 
-Your 'friend' <%= @user.name.capitalize %> wanted to let you know that you've changed. Tell someone else that they've changed. They have it coming. I mean who do they think they are.
+Your 'friend' <%= @user.name.capitalize %> wanted to let you know that you've changed. Tell someone else that they've changed. It's your duty.
 ```
 
 ##Notification Controller##
