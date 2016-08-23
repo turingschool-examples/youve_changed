@@ -7,7 +7,7 @@ If you don't already have one, the first step you should do is sign up for an ac
 Now that we've got that, go ahead and clone down the repo
 
 ```shell
-git clone https://github.com/tessgriffin/youve_changed.git youve_changed
+git clone https://github.com/turingschool-examples/youve_changed.git youve_changed
 ```
 
 ###Figaro###
