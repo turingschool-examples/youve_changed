@@ -1,6 +1,6 @@
-##Sending Email with the service Sendgrid##
+##Sending Email with the service Sendgrid
 
-###Getting Started###
+###Getting Started
 
 If you don't already have one, the first step you should do is sign up for an account with Sendgrid. It would be best to do this ahead of time. Sendgrid with provision your account at first so it might take some time to get the account set up. You should sign up for the free account.
 
@@ -10,7 +10,7 @@ Now that we've got that, go ahead and clone down the repo
 git clone https://github.com/turingschool-examples/youve_changed.git youve_changed
 ```
 
-###Figaro###
+###Figaro
 
 Our next step will be to set up Figaro. It is a gem that let's us set up ruby environment variables for things like keys (or that Sendgrid username and password you just set up)
 
@@ -37,7 +37,7 @@ SENDGRID_PASSWORD: "supersecretpassword"
 
 And remember, don't add the application.yml to your commits! We never push up our keys to Github.
 
-##Creating the Mailer##
+##Creating the Mailer
 
 Our next step will be to create the Friend mailer to passive-aggressively inform your friends that they've changed.
 
@@ -69,7 +69,7 @@ Depending on the person's email client you're sending the email to, it will rend
 Your 'friend' <%= @user.name.capitalize %> wanted to let you know that you've changed. Tell someone else that they've changed. It's your duty.
 ```
 
-##Notification Controller##
+##Notification Controller
 
 Next we'll make a new controller that will call our mailer. Create a controller called NotificationController
 
@@ -90,7 +90,7 @@ We'll also make sure we put that route into the routes file:
 ```rb
 post '/notification' => 'notification#create'
 ```
-##Putting it all together##
+##Putting it all together
 
 Remember that setup we did earlier with Sendgrid? Now let's plug it into our program.
 
