@@ -1,0 +1,99 @@
+  [1m[35m (240.5ms)[0m  [1m[35mCREATE DATABASE "youve_changed_development" ENCODING = 'unicode'[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (96.4ms)[0m  [1m[35mCREATE DATABASE "youve_changed_test" ENCODING = 'unicode'[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (31.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (20.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3453725740353918225)[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+Migrating to CreateUsers (20150224031247)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3453725740353918225)[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3453725740353918225)[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+Migrating to CreateUsers (20150224031247)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (24.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial NOT NULL PRIMARY KEY, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20150224031247_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20150224031247"]]
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-04 06:01:27.000755"], ["updated_at", "2020-02-04 06:01:27.000755"]]
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3453725740353918225)[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/bin/rake:22
+Started GET "/" for ::1 at 2020-02-03 23:02:31 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dee/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 387ms (Views: 378.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-03 23:02:56 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-03 23:02:58 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-03 23:03:00 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-03 23:03:36 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-02-03 23:04:16 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q8cTxhrIarv3H5uSAakiSiIAlnXwSLGWjR749eQ5GpPaavs5gZGmPuNEtC5HIPCCtAqrzMO2B3i7ukxpEnzSOw==", "user"=>{"name"=>"Jane", "email"=>"jane@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jane"], ["email", "jane@example.com"], ["password_digest", "$2a$12$fAEHQpcKVIO8Srw3Bi/ldet0CiMolhB2drUNoemaprk02iSn4jhDq"], ["created_at", "2020-02-04 06:04:17.002862"], ["updated_at", "2020-02-04 06:04:17.002862"]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8
+Redirected to http://localhost:3000/
+Completed 302 Found in 252ms (ActiveRecord: 21.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-03 23:04:17 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered welcome/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 31ms (Views: 25.2ms | ActiveRecord: 2.6ms)
+
+
